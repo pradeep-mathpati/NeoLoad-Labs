@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE report SYSTEM "report.dtd">
+<report>
+   <summary>
+      <project name="Petstore710">
+         <scenario name="scenario1">
+            <description>
+            </description>
+            <loadpolicies>
+               <constantpolicy count="2" population="Population1"/>
+            </loadpolicies>
+            <startstoppolicies>
+               <startstoppolicy population="Population1" startdelay="0" startpolicy="START_IMMEDIATE" stopdelay="60" stoppolicy="STOP_IMMEDIATE"/>
+            </startstoppolicies>
+            <loadgenerators>
+               <loadgenerator name="localhost:7100"/>
+            </loadgenerators>
+            <dataFilters/>
+            <populations>
+               <population name="Population1">
+                  <populationSplits>
+                     <populationSplit browserProfileName="Recorded one" cache="1" connections="6" cookies="true" downloadBandwidth="Unlimited" downloadLatency="0ms" downloadPacketLoss="0%" factor="100.0" name="NewPetstore" signalStrength="" uploadBandwidth="Unlimited" uploadLatency="0ms" uploadPacketLoss="0%" userAgent="" wanEmulationProfileName="Unlimited"/>
+                  </populationSplits>
+               </population>
+            </populations>
+            <virtual-user-profiles>
+               <virtual-user-profile errorPolicy="DO_NOTHING" failedAssertionPolicy="DO_NOTHING" name="NewPetstore" pacingEnabled="false" pacingEnd="" pacingSimpleValue="" pacingStart="">
+                  <thinktime-policy thinkTimeMode="MODE_SIMPLE_THINK_TIME" thinktimeFactorValue="100" thinktimePolicy="0" thinktimeRangeValue="0" thinktimeValue="5000"/>
+               </virtual-user-profile>
+            </virtual-user-profiles>
+            <rdv-collection/>
+         </scenario>
+         <sla-profiles/>
+         <sla-profiles-details/>
+         <settings>
+            <truncatedMean centeredInterval="true" percentage="90"/>
+            <percentiles percentage1="50" percentage2="95" percentage3="99"/>
+         </settings>
+      </project>
+      <test build_number="" duration="00:01:08" end="Nov 25, 2019 2:46:15 PM" name="14:44 - 25 Nov 2019" start="Nov 25, 2019 2:45:07 PM" status="PASS" std_start_time="2019-11-25 14:45:07" terminationReason="POLICY"/>
+      <statistics image="images/summary.png" nameScenario="scenario1">
+         <statistic name="avg_hits/s" severity="none" unit="" value="1.8"/>
+         <statistic name="avg_pages/s" severity="none" unit="" value="0.1"/>
+         <statistic name="avg_reqresponsetime" severity="none" unit="s" value="0.11"/>
+         <statistic name="avg_pageresponsetime" severity="none" unit="s" value="0.513"/>
+         <statistic name="avg_throughput" severity="none" unit=" Mb/s" value="0.02"/>
+         <statistic name="total_pages" severity="none" unit="" value="10"/>
+         <statistic name="total_hits" severity="none" unit="" value="126"/>
+         <statistic name="total_users_launched" severity="none" unit="" value="2"/>
+         <statistic name="total_throughput" severity="none" unit=" MB" value="0.19"/>
+         <statistic name="total_iterations_completed" severity="none" unit="" value="0"/>
+         <statistic name="total_errors" severity="none" unit="" value="0"/>
+         <statistic name="error_percentile" severity="none" unit="%" value="0"/>
+         <statistic name="total_logical_actions_errors" severity="none" unit="" value="0"/>
+         <statistic name="total_alerts_percentage" severity="none" unit="%" value="0"/>
+      </statistics>
+      <hotspots>
+         <toperrors/>
+         <topalerts/>
+         <firstalerts/>
+         <topavg>
+            <top count="" duration="1.61" name="/login_1" parentName="signin" vuName="NewPetstore"/>
+            <top count="" duration="0.423" name="/catalog" parentName="Init" vuName="NewPetstore"/>
+            <top count="" duration="0.222" name="/logout" parentName="Signout" vuName="NewPetstore"/>
+            <top count="" duration="0.159" name="/login" parentName="signin" vuName="NewPetstore"/>
+            <top count="" duration="0.144" name="/" parentName="Init" vuName="NewPetstore"/>
+         </topavg>
+         <topmax>
+            <top count="" duration="1.66" name="/login_1" parentName="signin" vuName="NewPetstore"/>
+            <top count="" duration="0.426" name="/catalog" parentName="Init" vuName="NewPetstore"/>
+            <top count="" duration="0.234" name="/logout" parentName="Signout" vuName="NewPetstore"/>
+            <top count="" duration="0.166" name="/login" parentName="signin" vuName="NewPetstore"/>
+            <top count="" duration="0.166" name="/" parentName="Init" vuName="NewPetstore"/>
+         </topmax>
+         <pushtopavg/>
+         <pushtopmax/>
+      </hotspots>
+      <requests-errors-summary/>
+      <logical-actions-errors-summary/>
+      <thirdparty-data-errors-summary/>
+      <alerts-summary/>
+      <all-summary>
+         <statistic-item avg="2.56" error_rate="0" errors="0" hits="2" id="ce5c038b-c49b-3c86-a887-9ec9d0057958" max="2.63" median="0" min="2.49" name="All User Paths" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="-" type="virtualuser"/>
+         <statistic-item avg="0.512" error_rate="0" errors="0" hits="10" id="b3b4c2e9-62ea-3b64-b964-846614544b6b" max="1.66" median="0" min="0.122" name="All pages" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="-" type="httppage"/>
+         <statistic-item avg="0.109" error_rate="0" errors="0" hits="126" id="a181a603-769c-3f98-ad92-7e7367c7aa51" max="1.09" median="0" min="0.004" name="All requests" stddev=" - " truncatedMean="-" type="httprequest"/>
+      </all-summary>
+      <all-transaction-summary>
+         <statistic-item avg="0.997" error_rate="0" errors="0" hits="4" id="e0dbf49a-8f90-339a-b538-dbc0b4e8401b" max="1.81" median="0.234" min="0.21" name="All Transactions" percentile1="0.234" percentile2="1.81" percentile3="1.81" stddev="0.896" truncatedMean="0.726" type="container"/>
+      </all-transaction-summary>
+   </summary>
+   <settings graphGranularityOptionEnumValue="Highest" graphSamplingIntervalInSeconds="1" isOldProjectVersion="false" neoloadVersion="7.1.0;build=20191120-35">
+      <per-zone-application-proxies/>
+      <constant-variables/>
+      <runtime-misc-parameters>
+         <runtime-parameter parameterName="response.cache.optimized" parameterValue="false"/>
+         <runtime-parameter parameterName="max.dynamic.redirects.count" parameterValue="10"/>
+         <runtime-parameter parameterName="disable.cache.for.extractors" parameterValue="true"/>
+         <runtime-parameter parameterName="https.invalidate.session" parameterValue="false"/>
+         <runtime-parameter parameterName="websocket.extensions.enabled" parameterValue="true"/>
+         <runtime-parameter parameterName="advancedaction.screenshot.lg.max.count.per.iteration" parameterValue="10"/>
+         <runtime-parameter parameterName="OracleForms.oracle.forms.session.migration.retry.delay" parameterValue="1000"/>
+         <runtime-parameter parameterName="OracleForms.oracle.forms.skipped.properties.handler.classid" parameterValue=""/>
+         <runtime-parameter parameterName="http.add.additional.cookies" parameterValue="true"/>
+         <runtime-parameter parameterName="https.tls.enabled" parameterValue="true"/>
+         <runtime-parameter parameterName="http.protocol.element-charset" parameterValue="UTF-8"/>
+         <runtime-parameter parameterName="http.strict.mode" parameterValue="true"/>
+         <runtime-parameter parameterName="OracleForms.oracle.forms.session.migration.max.retry" parameterValue="5"/>
+         <runtime-parameter parameterName="siebel.property.name.doNotDecode" parameterValue="cud,cik"/>
+         <runtime-parameter parameterName="wss.protocols" parameterValue="SSLv3,TLSv1,TLSv1.1,TLSv1.2"/>
+         <runtime-parameter parameterName="AMF.error.fault.code.exclude.0" parameterValue="Server.Security.NotLoggedIn"/>
+         <runtime-parameter parameterName="OracleForms.server.http.header.regexp.0" parameterValue="oracle.application.server(.*)"/>
+         <runtime-parameter parameterName="scheme.negotiate.subprotocol" parameterValue="ntlm"/>
+         <runtime-parameter parameterName="ajax.play.sequentially" parameterValue="true"/>
+         <runtime-parameter parameterName="OracleForms.session.identifier.1" parameterValue="JServRootId"/>
+         <runtime-parameter parameterName="https.ciphers.whitelist" parameterValue="TLS_DHE_DSS_WITH_AES_128_CBC_SHA,TLS_DHE_DSS_WITH_AES_128_CBC_SHA256,TLS_DHE_DSS_WITH_AES_256_CBC_SHA,TLS_DHE_DSS_WITH_AES_256_CBC_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384"/>
+         <runtime-parameter parameterName="advancedaction.screenshot.controller.max.count.per.test" parameterValue="300"/>
+         <runtime-parameter parameterName="OracleForms.session.identifier.0" parameterValue="jsessionid"/>
+         <runtime-parameter parameterName="advancedaction.screenshot.lg.max.count.per.lg" parameterValue="60"/>
+         <runtime-parameter parameterName="OracleForms.client.user.agent.http.header.regexp.1" parameterValue="(.+)Java/([0-9|.|_]+)"/>
+         <runtime-parameter parameterName="https.protocols" parameterValue="SSLv3,TLSv1,TLSv1.1,TLSv1.2"/>
+         <runtime-parameter parameterName="OracleForms.client.user.agent.http.header.regexp.0" parameterValue="(.*)java([0-9]*|\.)*-internal(.*)"/>
+         <runtime-parameter parameterName="advancedaction.screenshot.lg.max.count.per.vu" parameterValue="15"/>
+         <runtime-parameter parameterName="advancedaction.screenshot.lg.max.count.per.action" parameterValue="30"/>
+         <runtime-parameter parameterName="js.optimizationLevel" parameterValue="0"/>
+         <runtime-parameter parameterName="http.client.use.legacy" parameterValue="false"/>
+         <runtime-parameter parameterName="OracleForms.content.type.http.header.regexp" parameterValue="application/octet-stream"/>
+         <runtime-parameter parameterName="scheme.priority" parameterValue="negotiate,ntlm,digest,basic"/>
+      </runtime-misc-parameters>
+      <runtime-parameters>
+         <runtime-parameter parameterName="gwt.client.server.mode" parameterValue="false"/>
+         <runtime-parameter parameterName="jetty.thread.pool.max.thread" parameterValue="20000"/>
+         <runtime-parameter parameterName="store.containers.in.rawresults" parameterValue="false"/>
+         <runtime-parameter parameterName="maximum.content.errors.stored" parameterValue="10"/>
+         <runtime-parameter parameterName="URL.encode.lowercase" parameterValue="false"/>
+         <runtime-parameter parameterName="lg.id" parameterValue="0"/>
+         <runtime-parameter parameterName="runtime.check.mode.play.thinktime" parameterValue="true"/>
+         <runtime-parameter parameterName="gwt.lz.compression.activated" parameterValue="false"/>
+         <runtime-parameter parameterName="runtime.ignore.resource.error.code.enabled" parameterValue="false"/>
+         <runtime-parameter parameterName="runtime.appdynamics.enabled" parameterValue="false"/>
+         <runtime-parameter parameterName="jetty.http2.ignore.maxframe.settings" parameterValue="false"/>
+         <runtime-parameter parameterName="runtime.httpclient.oldversion" parameterValue="false"/>
+         <runtime-parameter parameterName="aggregator.period" parameterValue="1000"/>
+         <runtime-parameter parameterName="lg.number" parameterValue="1"/>
+         <runtime-parameter parameterName="gwt.class.signature.check" parameterValue="true"/>
+         <runtime-parameter parameterName="runtime.ignore.recorded.response.code.enabled" parameterValue="false"/>
+         <runtime-parameter parameterName="comma.cookie.separator" parameterValue="true"/>
+         <runtime-parameter parameterName="max.errors.per.second" parameterValue="10"/>
+         <runtime-parameter parameterName="http.protocol.max-redirects" parameterValue="100"/>
+         <runtime-parameter parameterName="cache.enabled" parameterValue="true"/>
+         <runtime-parameter parameterName="runtime.connection.timeout" parameterValue="300000"/>
+         <runtime-parameter parameterName="number.characters.check.xml.valid" parameterValue="500"/>
+         <runtime-parameter parameterName="codec.accepted.content.types" parameterValue="{json=application/hal+json}"/>
+         <runtime-parameter parameterName="jetty.do_not_close_output_after_request" parameterValue="false"/>
+         <runtime-parameter parameterName="http.querystring.encoding" parameterValue="UTF-8"/>
+         <runtime-parameter parameterName="runtime.dynatrace.enabled" parameterValue="false"/>
+         <runtime-parameter parameterName="jetty.thread.shared.selector" parameterValue="true"/>
+         <runtime-parameter parameterName="runtime.max.post.store" parameterValue="100000"/>
+         <runtime-parameter parameterName="total.error.entries.to.send" parameterValue="20000"/>
+         <runtime-parameter parameterName="jetty.thread.pool.idle.timeout.ms" parameterValue="10000"/>
+         <runtime-parameter parameterName="store.rawresults" parameterValue="true"/>
+         <runtime-parameter parameterName="hessian.serialization.properties" parameterValue="{}"/>
+         <runtime-parameter parameterName="runtime.max.upload.size.memory" parameterValue="10"/>
+         <runtime-parameter parameterName="cache.size" parameterValue="1000"/>
+         <runtime-parameter parameterName="runtime.ignored.recorded.response.code.list" parameterValue="[404]"/>
+         <runtime-parameter parameterName="gwt.identifier.strict.content.type" parameterValue="false"/>
+         <runtime-parameter parameterName="runtime.virtual.users.states" parameterValue="true"/>
+         <runtime-parameter parameterName="jetty.thread.pool.min.thread" parameterValue="20"/>
+         <runtime-parameter parameterName="runtime.pacing.always.applied" parameterValue="false"/>
+         <runtime-parameter parameterName="jetty.max.request.buffer.size" parameterValue="16384"/>
+         <runtime-parameter parameterName="min.thinktime" parameterValue="0"/>
+         <runtime-parameter parameterName="html.selector.to.exclude.during.preparcing" parameterValue=""/>
+         <runtime-parameter parameterName="runtime.ignored.resource.error.code.list" parameterValue="[]"/>
+         <runtime-parameter parameterName="runtime.transfer.encoding.chunked.size.in.bytes" parameterValue="4096"/>
+         <runtime-parameter parameterName="static.request.optimization.referreronly" parameterValue="false"/>
+         <runtime-parameter parameterName="silverlight.license.isEnabled" parameterValue="true"/>
+         <runtime-parameter parameterName="runtime.introscope.headers.enabled" parameterValue="false"/>
+         <runtime-parameter parameterName="runtime.nudge.enabled" parameterValue="false"/>
+         <runtime-parameter parameterName="runtime.so.timeout" parameterValue="300000"/>
+         <runtime-parameter parameterName="jetty.thread.pool.queue.size" parameterValue="6000"/>
+         <runtime-parameter parameterName="cache.timeout" parameterValue="5000"/>
+         <runtime-parameter parameterName="jetty.max.response.buffer.size" parameterValue="8388608"/>
+         <runtime-parameter parameterName="ignore.100continue.header" parameterValue="false"/>
+         <runtime-parameter parameterName="runtime.mode" parameterValue="1"/>
+      </runtime-parameters>
+   </settings>
+   <shared-elements>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="category" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="products" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="AddToCart" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Checkout" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Submit" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+   </shared-elements>
+   <shared-elements-sla>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="category" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="products" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="AddToCart" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Checkout" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+      <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Submit" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+   </shared-elements-sla>
+   <servers>
+      <server host="10.0.5.11" negociatedProtocol="HTTP/1.1" port="8080" supportedProtocol="HTTP/1.1"/>
+   </servers>
+   <zones_statistics avgDurationZonesImage="images/avgDurationZones.png" errorsZonesImage="images/errorsZones.png">
+      <zone_statistics escapedName="@zone par d#E9faut" hitsImage="images/hits_zone_@zone par d%23E9faut.png" loadImage="images/load_zone_@zone par d%23E9faut.png" name="Zone par défaut">
+         <statistic name="nb_of_lgs" severity="none" unit="" value="1"/>
+         <statistic name="avg_hits/s" severity="none" unit="" value="1.8"/>
+         <statistic name="avg_pages/s" severity="none" unit="" value="0.1"/>
+         <statistic name="avg_reqresponsetime" severity="none" unit="s" value="0.11"/>
+         <statistic name="avg_pageresponsetime" severity="none" unit="s" value="0.513"/>
+         <statistic name="avg_throughput" severity="none" unit=" Mb/s" value="0.02"/>
+         <statistic name="total_pages" severity="none" unit="" value="10"/>
+         <statistic name="total_hits" severity="none" unit="" value="126"/>
+         <statistic name="total_users_launched" severity="none" unit="" value="0"/>
+         <statistic name="total_throughput" severity="none" unit=" MB" value="0.19"/>
+         <statistic name="total_iterations_completed" severity="none" unit="" value="0"/>
+         <statistic name="total_errors" severity="none" unit="" value="0"/>
+         <statistic name="error_percentile" severity="none" unit="%" value="0"/>
+         <statistic name="total_logical_actions_errors" severity="none" unit="" value="0"/>
+         <statistic name="total_hits_percentage" severity="none" unit="" value="100%"/>
+         <statistic name="avg_pageresponsetime_diff" severity="none" unit="s" value="0%"/>
+         <statistic name="error_percentile_diff" severity="none" unit="%" value=" - %"/>
+      </zone_statistics>
+      <global_statistics escapedName="" hitsImage="" loadImage="" name="">
+         <statistic name="nb_of_lgs" severity="none" unit="" value="1"/>
+         <statistic name="avg_hits/s" severity="none" unit="" value="1.8"/>
+         <statistic name="avg_pages/s" severity="none" unit="" value="0.1"/>
+         <statistic name="avg_reqresponsetime" severity="none" unit="s" value="0.11"/>
+         <statistic name="avg_pageresponsetime" severity="none" unit="s" value="0.513"/>
+         <statistic name="avg_throughput" severity="none" unit=" Mb/s" value="0.02"/>
+         <statistic name="total_pages" severity="none" unit="" value="10"/>
+         <statistic name="total_hits" severity="none" unit="" value="126"/>
+         <statistic name="total_users_launched" severity="none" unit="" value="2"/>
+         <statistic name="total_throughput" severity="none" unit=" MB" value="0.19"/>
+         <statistic name="total_iterations_completed" severity="none" unit="" value="0"/>
+         <statistic name="total_errors" severity="none" unit="" value="0"/>
+         <statistic name="error_percentile" severity="none" unit="%" value="0"/>
+         <statistic name="total_logical_actions_errors" severity="none" unit="" value="0"/>
+         <statistic name="total_hits_percentage" severity="none" unit="" value="100%"/>
+         <statistic name="avg_pageresponsetime_diff" severity="none" unit="s" value="0%"/>
+         <statistic name="error_percentile_diff" severity="none" unit="%" value=" - %"/>
+      </global_statistics>
+   </zones_statistics>
+   <populations_statistics avgDurationPopulationsImage="images/avgDurationPopulations.png" errorsPopulationsImage="images/errorsPopulations.png" scenario="scenario1">
+      <population_statistics name="Population1">
+         <statistic name="avg_hits/s" severity="none" unit="" value="1.8"/>
+         <statistic name="avg_pages/s" severity="none" unit="" value="0.1"/>
+         <statistic name="avg_reqresponsetime" severity="none" unit="s" value="0.11"/>
+         <statistic name="avg_pageresponsetime" severity="none" unit="s" value="0.513"/>
+         <statistic name="avg_throughput" severity="none" unit=" Mb/s" value="0.02"/>
+         <statistic name="total_pages" severity="none" unit="" value="10"/>
+         <statistic name="total_hits" severity="none" unit="" value="126"/>
+         <statistic name="total_users_launched" severity="none" unit="" value="0"/>
+         <statistic name="total_throughput" severity="none" unit=" MB" value="0.19"/>
+         <statistic name="total_iterations_completed" severity="none" unit="" value="0"/>
+         <statistic name="total_errors" severity="none" unit="" value="0"/>
+         <statistic name="error_percentile" severity="none" unit="%" value="0"/>
+         <statistic name="total_logical_actions_errors" severity="none" unit="" value="0"/>
+         <statistic name="total_hits_percentage" severity="none" unit="" value="100%"/>
+         <statistic name="avg_pageresponsetime_diff" severity="none" unit="s" value="0%"/>
+         <statistic name="error_percentile_diff" severity="none" unit="%" value=" - %"/>
+      </population_statistics>
+      <global_statistics>
+         <statistic name="avg_hits/s" severity="none" unit="" value="1.8"/>
+         <statistic name="avg_pages/s" severity="none" unit="" value="0.1"/>
+         <statistic name="avg_reqresponsetime" severity="none" unit="s" value="0.11"/>
+         <statistic name="avg_pageresponsetime" severity="none" unit="s" value="0.513"/>
+         <statistic name="avg_throughput" severity="none" unit=" Mb/s" value="0.02"/>
+         <statistic name="total_pages" severity="none" unit="" value="10"/>
+         <statistic name="total_hits" severity="none" unit="" value="126"/>
+         <statistic name="total_users_launched" severity="none" unit="" value="2"/>
+         <statistic name="total_throughput" severity="none" unit=" MB" value="0.19"/>
+         <statistic name="total_iterations_completed" severity="none" unit="" value="0"/>
+         <statistic name="total_errors" severity="none" unit="" value="0"/>
+         <statistic name="error_percentile" severity="none" unit="%" value="0"/>
+         <statistic name="total_logical_actions_errors" severity="none" unit="" value="0"/>
+         <statistic name="total_hits_percentage" severity="none" unit="" value="100%"/>
+         <statistic name="avg_pageresponsetime_diff" severity="none" unit="s" value="0%"/>
+         <statistic name="error_percentile_diff" severity="none" unit="%" value=" - %"/>
+      </global_statistics>
+   </populations_statistics>
+   <virtual-users>
+      <statistic-item avg="2.56" error_rate="0" errors="0" hits="2" id="NewPetstore" max="2.63" median="0" min="2.49" name="NewPetstore" parentName="User Paths" percentile1=" - " percentile2=" - " percentile3=" - " stddev=" - " truncatedMean="-" type="virtualuser">
+         <statistic-item avg="2.34" error_rate="0" errors="0" hits="2" id="$parent=NewPetstore;$index=0" max="2.4" median="0" min="2.28" name="Init" parentName="NewPetstore" percentile1=" - " percentile2=" - " percentile3=" - " stddev=" - " truncatedMean="-" type="container">
+            <sla-profiles-details/>
+            <statistic-item avg="0.144" error_rate="0" errors="0" hits="2" id="c8c21ce3-6e65-40a7-b88b-d778c4e68dd5" max="0.166" median="0" min="0.122" name="/" parentName="Init" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="-" type="httppage">
+               <sla-profiles-details/>
+            </statistic-item>
+            <statistic-item avg="0.423" error_rate="0" errors="0" hits="2" id="3b11306f-4888-403a-89b3-f886046ef375" max="0.426" median="0" min="0.42" name="/catalog" parentName="Init" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="-" type="httppage">
+               <sla-profiles-details/>
+            </statistic-item>
+            <statistic-item avg="1.77" error_rate="0" errors="0" hits="2" id="5c971bda-63d7-4ae9-8d2d-cef093d3a875" max="1.81" median="1.74" min="1.74" name="signin" parentName="Init" percentile1="1.74" percentile2="1.81" percentile3="1.81" stddev="0.053" truncatedMean="1.74" type="container">
+               <sla-profiles-details/>
+               <statistic-item avg="0.159" error_rate="0" errors="0" hits="2" id="873a215b-ed75-4316-bb1f-8d6077162438" max="0.166" median="0" min="0.152" name="/login" parentName="signin" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="-" type="httppage">
+                  <sla-profiles-details/>
+               </statistic-item>
+               <statistic-item avg="1.61" error_rate="0" errors="0" hits="2" id="e52de771-8e58-4607-8d3d-30e77b1fbe9f" max="1.66" median="0" min="1.57" name="/login_1" parentName="signin" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="-" type="httppage">
+                  <sla-profiles-details/>
+               </statistic-item>
+            </statistic-item>
+         </statistic-item>
+         <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Actions" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container">
+            <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="category" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+            <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="products" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+            <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="AddToCart" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+            <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Checkout" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+            <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Submit" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="container"/>
+         </statistic-item>
+         <statistic-item avg="0.222" error_rate="0" errors="0" hits="2" id="$parent=NewPetstore;$index=2" max="0.234" median="0" min="0.21" name="End" parentName="NewPetstore" percentile1=" - " percentile2=" - " percentile3=" - " stddev=" - " truncatedMean="-" type="container">
+            <sla-profiles-details/>
+            <statistic-item avg="0.222" error_rate="0" errors="0" hits="2" id="54d07fc0-8b3d-4d8b-a563-7d6cf0ea194f" max="0.234" median="0.21" min="0.21" name="Signout" parentName="End" percentile1="0.21" percentile2="0.234" percentile3="0.234" stddev="0.017" truncatedMean="0.21" type="container">
+               <sla-profiles-details/>
+               <statistic-item avg="0.222" error_rate="0" errors="0" hits="2" id="ad30447f-a107-4f9b-93ff-6b66998ad2cb" max="0.234" median="0" min="0.21" name="/logout" parentName="Signout" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="-" type="httppage">
+                  <sla-profiles-details/>
+               </statistic-item>
+            </statistic-item>
+         </statistic-item>
+      </statistic-item>
+   </virtual-users>
+   <virtual-users-sla>
+      <statistic-item avg="2.56" error_rate="0" errors="0" hits="2" id="NewPetstore" max="2.63" median="0" min="2.49" name="NewPetstore" parentName="User Paths" percentile1=" - " percentile2=" - " percentile3=" - " stddev=" - " truncatedMean="-" type="virtualuser"/>
+   </virtual-users-sla>
+   <media-items>
+      <media-item name="NewPetstore"/>
+   </media-items>
+   <monitors>
+      <monitored-host name="Controller">
+         <monitor name="Controller">
+            <counters>
+               <statistic-item avg="1.88" error_rate="0" errors="0" hits="0" max="2" median="2" min="0" name="Controller/User Load" percentile1="0" percentile2="0" percentile3="0" stddev="0.471" truncatedMean="1.97" type="counter"/>
+               <statistic-item avg="0.02" error_rate="0" errors="0" hits="0" max="0.865" median="0" min="0" name="Controller/Throughput" percentile1="0" percentile2="0" percentile3="0" stddev="0.108" truncatedMean="0.001" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Controller/Alerts" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="0" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Controller/Critical Alerts" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="0" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Controller/Warning Alerts" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="0" type="counter"/>
+               <statistic-item avg="19" error_rate="0" errors="0" hits="0" max="37" median="17" min="8" name="Controller/CPU Load" percentile1="0" percentile2="0" percentile3="0" stddev="6.92" truncatedMean="18.5" type="counter"/>
+               <statistic-item avg="15.9" error_rate="0" errors="0" hits="0" max="26" median="23" min="4" name="Controller/Memory Used" percentile1="0" percentile2="0" percentile3="0" stddev="9.74" truncatedMean="15.8" type="counter"/>
+               <statistic-item avg="608" error_rate="0" errors="0" hits="0" max="612" median="609" min="579" name="Controller/Thread Count" percentile1="0" percentile2="0" percentile3="0" stddev="4.24" truncatedMean="608.4" type="counter"/>
+               <statistic-item avg="1" error_rate="0" errors="0" hits="0" max="1" median="1" min="1" name="Controller/Connected" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="1" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Controller/Total Disconnections" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="Controller/Total Reconnections" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="counter"/>
+               <statistic-item avg="90.6" error_rate="0" errors="0" hits="0" max="469" median="50.1" min="24" name="Controller/Network/Segments sent/sec." percentile1="0" percentile2="0" percentile3="0" stddev="90.2" truncatedMean="76.3" type="counter"/>
+               <statistic-item avg="0.044" error_rate="0" errors="0" hits="0" max="1" median="0" min="0" name="Controller/Network/Segments retransmitted/sec." percentile1="0" percentile2="0" percentile3="0" stddev="0.207" truncatedMean="0" type="counter"/>
+               <statistic-item avg="0.543" error_rate="0" errors="0" hits="0" max="5.37" median="0.185" min="0.117" name="Controller/Network/enp6s4 (enp6s4)/Megabits received/sec." percentile1="0" percentile2="0" percentile3="0" stddev="0.928" truncatedMean="0.35" type="counter"/>
+               <statistic-item avg="0.11" error_rate="0" errors="0" hits="0" max="1.04" median="0.025" min="0.006" name="Controller/Network/enp6s4 (enp6s4)/Megabits sent/sec." percentile1="0" percentile2="0" percentile3="0" stddev="0.182" truncatedMean="0.077" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0.001" median="0" min="0" name="Controller/NeoLoad Web/Megabits received/sec." percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="counter"/>
+               <statistic-item avg="0.009" error_rate="0" errors="0" hits="0" max="0.017" median="0.009" min="0" name="Controller/NeoLoad Web/Megabits sent/sec." percentile1="0" percentile2="0" percentile3="0" stddev="0.002" truncatedMean="0.009" type="counter"/>
+               <statistic-item avg="1.88" error_rate="0" errors="0" hits="0" max="2" median="2" min="0" name="Controller/Zone par défaut/User Load" percentile1="0" percentile2="0" percentile3="0" stddev="0.474" truncatedMean="1.97" type="counter"/>
+               <statistic-item avg="1.88" error_rate="0" errors="0" hits="0" max="2" median="2" min="0" name="Controller/Zone par défaut/Population1/User Load" percentile1="0" percentile2="0" percentile3="0" stddev="0.474" truncatedMean="1.97" type="counter"/>
+               <statistic-item avg="1.88" error_rate="0" errors="0" hits="0" max="2" median="2" min="0" name="Controller/Zone par défaut/Population1/NewPetstore/User Load" percentile1="0" percentile2="0" percentile3="0" stddev="0.474" truncatedMean="1.97" type="counter"/>
+            </counters>
+            <indicators/>
+            <alerts/>
+         </monitor>
+      </monitored-host>
+      <monitored-host name="LG localhost:7100">
+         <monitor name="LG localhost:7100">
+            <counters>
+               <statistic-item avg="18.9" error_rate="0" errors="0" hits="0" max="37" median="17" min="8" name="LG localhost:7100/CPU Load" percentile1="0" percentile2="0" percentile3="0" stddev="6.79" truncatedMean="18.4" type="counter"/>
+               <statistic-item avg="5.8" error_rate="0" errors="0" hits="0" max="8" median="6" min="1" name="LG localhost:7100/Memory Used" percentile1="0" percentile2="0" percentile3="0" stddev="2.21" truncatedMean="5.89" type="counter"/>
+               <statistic-item avg="0.02" error_rate="0" errors="0" hits="0" max="0.865" median="0" min="0" name="LG localhost:7100/Throughput" percentile1="0" percentile2="0" percentile3="0" stddev="0.108" truncatedMean="0.001" type="counter"/>
+               <statistic-item avg="1.88" error_rate="0" errors="0" hits="0" max="2" median="2" min="0" name="LG localhost:7100/User Load" percentile1="0" percentile2="0" percentile3="0" stddev="0.471" truncatedMean="1.97" type="counter"/>
+               <statistic-item avg="57.5" error_rate="0" errors="0" hits="0" max="64" median="61" min="41" name="LG localhost:7100/Thread Count" percentile1="0" percentile2="0" percentile3="0" stddev="6.71" truncatedMean="57.9" type="counter"/>
+               <statistic-item avg="0.107" error_rate="0" errors="0" hits="0" max="0.12" median="0.105" min="0.1" name="LG localhost:7100/Http client/Thread Pool used" percentile1="0" percentile2="0" percentile3="0" stddev="0.008" truncatedMean="0.107" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="LG localhost:7100/Http client/Task Pool used" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="0" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="LG localhost:7100/Controller Connection/Disconnections" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="0" type="counter"/>
+               <statistic-item avg="0" error_rate="0" errors="0" hits="0" max="0" median="0" min="0" name="LG localhost:7100/Controller Connection/Reconnections" percentile1="0" percentile2="0" percentile3="0" stddev=" - " truncatedMean="0" type="counter"/>
+               <statistic-item avg="2" error_rate="0" errors="0" hits="0" max="2" median="2" min="2" name="LG localhost:7100/Controller Connection/Ping Duration (ms)" percentile1="0" percentile2="0" percentile3="0" stddev="0" truncatedMean="2" type="counter"/>
+               <statistic-item avg="91.1" error_rate="0" errors="0" hits="0" max="469.5" median="51.2" min="24" name="LG localhost:7100/Network/Segments sent/sec." percentile1="0" percentile2="0" percentile3="0" stddev="89.8" truncatedMean="77.1" type="counter"/>
+               <statistic-item avg="0.116" error_rate="0" errors="0" hits="0" max="4.99" median="0" min="0" name="LG localhost:7100/Network/Segments retransmitted/sec." percentile1="0" percentile2="0" percentile3="0" stddev="0.63" truncatedMean="0" type="counter"/>
+               <statistic-item avg="0.542" error_rate="0" errors="0" hits="0" max="5.38" median="0.186" min="0.117" name="LG localhost:7100/Network/enp6s4 (enp6s4)/Megabits received/sec." percentile1="0" percentile2="0" percentile3="0" stddev="0.921" truncatedMean="0.352" type="counter"/>
+               <statistic-item avg="0.111" error_rate="0" errors="0" hits="0" max="1.04" median="0.025" min="0.006" name="LG localhost:7100/Network/enp6s4 (enp6s4)/Megabits sent/sec." percentile1="0" percentile2="0" percentile3="0" stddev="0.181" truncatedMean="0.079" type="counter"/>
+            </counters>
+            <indicators/>
+            <alerts/>
+         </monitor>
+      </monitored-host>
+   </monitors>
+   <dashboards>
+      <dashboard name="Main graphs">
+         <graph container="false" custom="false" image="images/pages_avg.png" name="pages.average" percentileOnly="false" title="Average page response time">
+            <statistic-item avg="0.513" max="1.659" median="0.222" min="0.144" name="pages.average" stddev="0.591" truncatedMean="0.385" type="graphstatistic"/>
+            <note>Displays the average response time, in seconds, of all pages during the test.</note>
+         </graph>
+         <graph container="false" custom="false" image="images/requests_avg.png" name="requests.average" percentileOnly="false" title="Average request response time">
+            <statistic-item avg="0.11" max="0.27" median="0.072" min="0.02" name="requests.average" stddev="0.092" truncatedMean="0.105" type="graphstatistic"/>
+            <note>Displays the average response time, in seconds, of all requests during the test.</note>
+         </graph>
+         <graph container="true" custom="false" image="images/containers_avg.png" name="transactions.average" percentileOnly="false" title="Average response time (Transactions)">
+            <statistic-item avg="0.998" max="1.811" median="0.979" min="0.222" name="transactions.average" stddev="0.896" truncatedMean="0.727" type="graphstatistic"/>
+            <note>Displays the average response time, in seconds, of all Transactions during the test.</note>
+         </graph>
+         <graph container="false" custom="false" image="images/hits.png" name="hits" percentileOnly="false" title="Requests per second">
+            <statistic-item avg="1.9" max="34" median="0" min="0" name="hits" stddev="7" truncatedMean="0.2" type="graphstatistic"/>
+            <note>Displays the number of requests per second.</note>
+         </graph>
+         <graph container="false" custom="false" image="images/errors.png" name="errors" percentileOnly="false" title="Errors">
+            <statistic-item avg="0" max="0" median="0" min="0" name="errors" stddev="0" truncatedMean="0" type="graphstatistic"/>
+            <note>Displays the number of errors per sampling interval.</note>
+         </graph>
+         <graph container="false" custom="false" image="images/throughput.png" name="throughput" percentileOnly="false" title="Throughput">
+            <statistic-item avg="0.02" max="0.87" median="0" min="0" name="throughput" stddev="0.11" truncatedMean="0" type="graphstatistic"/>
+            <note>Displays the number of megabits of data per second returned by the server.</note>
+         </graph>
+         <graph container="false" custom="false" image="images/percentile.png" name="percentile" percentileOnly="false" title="Distribution of Transaction Durations">
+            <note>Displays the percentage of Transactions that were performed within a given time range. This graph helps determine the percentage of Transactions that meet a performance objective. For example, it may show that 90% of the Transactions have a duration under n seconds.</note>
+         </graph>
+      </dashboard>
+   </dashboards>
+</report>

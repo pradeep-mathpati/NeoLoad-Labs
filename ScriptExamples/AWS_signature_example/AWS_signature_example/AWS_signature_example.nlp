@@ -1,0 +1,14 @@
+# Project description file
+
+project.name=AWS_signature_example
+project.version=8.6
+project.original.version=7.0
+product.name=NeoLoad
+product.original.name=NeoLoad
+product.original.version=7.1.0
+project.id=962eb6f0-e240-4922-956e-b587de977442
+project.config.path=config.zip
+project.config.storage=ZIP
+team.server.enabled=false
+product.version=9.0.2
+project.is-open-test-settings-after-upload=true
